@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/material": "^5.15.14",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "pg": "^8.2.1",
@@ -11,7 +16,8 @@
     "react-redux": "^7.2.9",
     "react-router-dom": "^5.3.4",
     "redux": "^4.2.1",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",

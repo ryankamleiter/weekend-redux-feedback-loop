@@ -2,6 +2,8 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
+import { Button } from "@mui/material";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 export default function Review(props) {
 
@@ -46,6 +48,10 @@ export default function Review(props) {
         });
     }
 
+    const goBack = () => {
+        history.push("/comment")
+    }
+
     return (
         <div>
             <h2>Review Your Feedback</h2>
@@ -54,6 +60,9 @@ export default function Review(props) {
             <p>Support: {newSupport}</p>
             <p>Comment: {newComment}</p>
             <button type="button" onClick={handleSubmit} data-testid="next">Submit</button>
+            <Button onClick={goBack} variant="outlined" startIcon={<ArrowBackIosIcon />}>
+                Go Back
+            </Button>
 
         </div>
     )

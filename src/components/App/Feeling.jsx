@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import { Button } from "@mui/material";
 
 
 export default function Feeling() {
@@ -13,7 +15,7 @@ export default function Feeling() {
             type: "FEELINGS_ADD",
             payload: newFeeling
         });
-        setNewFeeling('')
+        // setNewFeeling('')
         history.push("/understanding")
     }
 
@@ -22,19 +24,22 @@ export default function Feeling() {
 
     return (
         <>
-        <h2>How are you feeling today? (1 - 6)</h2>
+            <h2>How are you feeling today? (1 - 6)</h2>
             <form onSubmit={handleSubmit}>
                 <input
-                type="number"
-                value={newFeeling}
-                onChange={event => setNewFeeling(event.target.value)}
-                max='6'
-                min='1'
-                data-testid="input"
+                    required
+                    type="number"
+                    value={newFeeling}
+                    onChange={event => setNewFeeling(event.target.value)}
+                    max='6'
+                    min='1'
+                    data-testid="input"
                 />
-                <button type="submit" data-testid="next">Next</button>
+                <Button type="submit" data-testid="next" variant="contained" endIcon={<NavigateNextIcon />}>
+                    Next
+                </Button>
             </form>
         </>
     )
-    
+
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-// import axios from 'axios';
+
 import './App.css';
-import { HashRouter as Router, Route, Link, useHistory } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import Feeling from './Feeling';
 import Review from './Review';
 import Understanding from './Understanding';
@@ -36,7 +36,6 @@ function App() {
       <Route exact path='/success'>
         <Reset />
       </Route>
-
     </div>
     </Router>
   );
