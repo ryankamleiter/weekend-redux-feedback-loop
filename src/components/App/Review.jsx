@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import { Button } from "@mui/material";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import CheckIcon from '@mui/icons-material/Check';
 
 export default function Review(props) {
 
@@ -59,9 +60,12 @@ export default function Review(props) {
             <p>Understanding: {newUnderstanding}</p>
             <p>Support: {newSupport}</p>
             <p>Comment: {newComment}</p>
-            <button type="button" onClick={handleSubmit} data-testid="next">Submit</button>
             <Button onClick={goBack} variant="outlined" startIcon={<ArrowBackIosIcon />}>
                 Go Back
+            </Button>
+            <button type="button" onClick={handleSubmit} data-testid="next">Submit</button>
+            <Button onClick={handleSubmit} variant="contained" endIcon={<CheckIcon />}>
+                Submit
             </Button>
 
         </div>
